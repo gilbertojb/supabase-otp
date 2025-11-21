@@ -1,0 +1,21 @@
+import type { MiddlewareConfig, NextRequest } from 'next/server'
+
+import { updateSession } from '@/lib/supabase/middleware'
+
+export async function proxy(request: NextRequest) {
+  return await updateSession(request)
+}
+
+export const config: MiddlewareConfig = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico, sitemap.xml, robots.txt (metadata files)
+     */
+    // eslint-disable-next-line @stylistic/max-len
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
+}
