@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/input-otp'
 
 import { useFormState } from '@/hooks/use-form-state'
-import { verifyCode } from './actions'
+import { verifyToken } from './actions'
 
 interface VerifyTokenFormProps {
   email: string
@@ -22,7 +22,7 @@ export function VerifyTokenForm({ email }: VerifyTokenFormProps) {
   const router = useRouter()
 
   const [{ errors, message, success }, handleSubmit, isPending] = useFormState(
-    verifyCode,
+    verifyToken,
     () => {
       router.push('/')
     },

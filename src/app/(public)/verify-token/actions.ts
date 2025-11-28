@@ -10,7 +10,7 @@ const verifyCodeSchema = z.object({
   token: z.string(),
 })
 
-export async function verifyCode(data: FormData) {
+export async function verifyToken(data: FormData) {
   const result = verifyCodeSchema.safeParse(Object.fromEntries(data))
 
   const supabase = await createClient()

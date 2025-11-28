@@ -17,7 +17,7 @@ export function SignInForm() {
   const [{ errors, message, success }, handleSubmit, isPending] = useFormState(
     signInWithEmail,
     () => {
-      router.push(`/verify-email?email=${email}`)
+      router.push(`/verify-token?email=${email}`)
     },
   )
 

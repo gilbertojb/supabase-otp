@@ -22,6 +22,7 @@ export async function signInWithEmail(data: FormData) {
   const { email } = result.data
 
   try {
+    // ✨ Autenticação segura e sem senha
     const { error } = await supabase.auth.signInWithOtp({
       email,
     })
