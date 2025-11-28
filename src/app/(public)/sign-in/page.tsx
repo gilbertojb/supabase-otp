@@ -1,4 +1,4 @@
-import { Zap } from 'lucide-react'
+import { Logo } from '@/components/logo'
 
 import {
   Card,
@@ -14,7 +14,7 @@ export default function SignInPage() {
   return (
     <main className="flex h-screen items-center justify-center">
       <div className="flex flex-col items-center gap-8 w-full max-w-md mx-4">
-        <Zap className="size-12" />
+        <Logo />
 
         <Card className="w-full max-w-sm">
           <CardHeader>
