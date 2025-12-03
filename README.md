@@ -76,4 +76,4 @@ O projeto estará disponível em `http://localhost:3000`.
 4. Verifique seu email para obter o código de 6 dígitos.
 5. Insira o código na página de verificação para entrar.
 
-<a href="https://gb7.tech/sb360-lista-de-espera/"><img src="./.github/banner.png" /></a>
+<a href="https://gb7.tech/sb360-lista-de-espera/?utm_source=github&utm_medium=supabase-otp&utm_campaign=lista-de-espera"><img src="./.github/banner.png" /></a>
